@@ -58,6 +58,13 @@ img {
     top: 3px;
     left: 4px;
     z-index: 10;
+    cursor: default;
+}
+.minus-btn:hover {
+    background: url(../images/minus-hover.png) no-repeat center / contain;
+}
+.minus-btn:active {
+    background: url(../images/minus-click.png) no-repeat center / contain;
 }
 .panel__totalbet-text,
 .panel__field-text {
@@ -83,9 +90,6 @@ img {
     user-select: none;
     z-index: 1;
 }
-.panel__totalbet-nums::before {
-    content: '';
-}
 .panel__totalbet-plus {
     position: absolute;
     border-radius: 50%;
@@ -98,10 +102,10 @@ img {
     cursor: pointer;
     z-index: 10;
 }
-.panel__totalbet-plus:hover {
+.plus-btn:hover {
     background: url(../images/plus-hover.png) no-repeat center / contain;
 }
-.panel__totalbet-plus:active {
+.plus-btn:active {
     background: url(../images/plus-hover-click.png) no-repeat center / contain;
 }
 .panel__field {
