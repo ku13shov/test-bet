@@ -6,6 +6,7 @@ const btnPlus = document.querySelector('.panel__totalbet-plus');
 const btnAuto = document.querySelector('.panel__auto-btn');
 const btnSpin = document.querySelector('.panel__spin-btn');
 const spins = document.querySelectorAll('.panel__auto-spin');
+const select = document.querySelector('.panel__auto-select');
 
 const audioPlay = () => {
     audio.currentTime = 0;
@@ -22,3 +23,19 @@ buttons.forEach(btn => {
 spins.forEach(item => {
     item.addEventListener('click', audioPlay);
 })
+
+btnAuto.addEventListener('mouseover', () => {
+    select.style.height = '195px';
+});
+
+btnAuto.addEventListener('mouseout', () => {
+    select.style.height = '0';
+});
+
+select.addEventListener('mouseover', () => {
+    select.style.height = '195px';
+});
+
+select.addEventListener('mouseout', () => {
+    select.style.height = '0';
+});
