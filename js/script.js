@@ -8,6 +8,7 @@ const check = document.querySelector('.panel__turbo-check');
 const turboBg = document.querySelectorAll('.panel__turbo-bg');
 const btnAuto = document.querySelector('.panel__auto-btn');
 const btnSpin = document.querySelector('.panel__spin-btn');
+const spinSign = document.querySelector('.panel__spin-sign');
 const spins = document.querySelectorAll('.panel__auto-spin');
 const select = document.querySelector('.panel__auto-select');
 const totalBet = document.querySelector('.panel__totalbet-nums');
@@ -237,5 +238,27 @@ btnTurbo.addEventListener('click', () => {
         btnTurbo.style.bottom = '20px';
         turboBg[0].classList.remove('active');
         turboBg[1].classList.add('active');
+    }
+});
+
+//Spin btn func----------------------------------------------
+const delPressed = () => {
+    btnSpin.classList.remove('pressed');
+    spinSign.style.animation = 'rotate 5.5s linear 2s infinite';
+    spinSign.src = 'images/spin-sign.png';
+    spinSign.style.width = '115px';
+}
+
+btnSpin.addEventListener('click', () => {
+    let timeout = setTimeout(delPressed, 3000);
+    
+    if (btnSpin.classList.contains('pressed')) {
+        delPressed();
+        clearInterval(timeout);
+    } else {
+        btnSpin.classList.add('pressed');
+        spinSign.style.animation = 'none';
+        spinSign.src = 'images/stop-normal.png';
+        spinSign.style.width = '60px';
     }
 });
