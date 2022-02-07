@@ -3,6 +3,9 @@ const buttons = document.querySelectorAll('button');
 const btnInfo = document.querySelector('.panel__info-btn');
 const btnMinus = document.querySelector('.panel__totalbet-minus');
 const btnPlus = document.querySelector('.panel__totalbet-plus');
+const btnTurbo = document.querySelector('.panel__turbo-btn');
+const check = document.querySelector('.panel__turbo-check');
+const turboBg = document.querySelectorAll('.panel__turbo-bg');
 const btnAuto = document.querySelector('.panel__auto-btn');
 const btnSpin = document.querySelector('.panel__spin-btn');
 const spins = document.querySelectorAll('.panel__auto-spin');
@@ -221,4 +224,18 @@ btnMinus.addEventListener('click', () => {
         coinIncr = coinIncr - 0.01;
         coin.textContent = `¥${coinIncr.toFixed(2)}`;
     } 
+});
+
+//Turbo btn func---------------------------------------------
+btnTurbo.addEventListener('click', () => {
+    audioPlay();
+    if (check.checked) {
+        btnTurbo.style.bottom = '4px';
+        turboBg[0].classList.add('active');
+        turboBg[1].classList.remove('active');
+    } else {
+        btnTurbo.style.bottom = '20px';
+        turboBg[0].classList.remove('active');
+        turboBg[1].classList.add('active');
+    }
 });

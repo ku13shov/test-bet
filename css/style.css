@@ -141,20 +141,26 @@ img {
     left: 870px;
     top: 34.5px;
 }
-.panel__turbo-bg_red,
-.panel__turbo-bg_green {
+.panel__turbo-bg,
+.panel__turbo-bg {
     height: 55px;
-}
-.panel__turbo-bg_green {
     display: none;
+}
+/* .panel__turbo-bg_green {
+    display: none;
+} */
+.panel__turbo-check {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
 .panel__turbo-btn {
     position: absolute;
     border: none;
     background: url(../images/turbo-normal.png) no-repeat center / contain;
     height: 30px;
-    width: 76px;
-    bottom: 8px;
+    width: 74px;
+    bottom: 4px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -169,6 +175,9 @@ img {
 }
 .panel__turbo-btn:active {
     background: url(../images/turbo-click.png) no-repeat center / contain;
+}
+.active {
+    display: block;
 }
 .panel__auto {
     position: absolute;
