@@ -176,9 +176,6 @@ img {
 .panel__turbo-btn:active {
     background: url(../images/turbo-click.png) no-repeat center / contain;
 }
-.active {
-    display: block;
-}
 .panel__auto {
     position: absolute;
     top: 34.5px;
@@ -199,12 +196,43 @@ img {
     border-bottom-right-radius: 25px;
     cursor: pointer;
     z-index: 10;
+    text-align: left;
+    padding-left: 35px;
+    font-weight: 900;
+    font-family: sans-serif;
+    color: #3d0000;
+    text-shadow: 0 1px 0 #ffc600;
+    user-select: none;
 }
 .panel__auto-btn:hover {
     background: url(../images/auto-hover.png) no-repeat center / contain;
 }
 .panel__auto-btn:active {
     background: url(../images/auto-click.png) no-repeat center / contain;
+}
+.panel__auto-counter {
+    position: absolute;
+    background: url(../images/counter-blue.png) no-repeat center / contain;
+    z-index: 10;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    top: 9px;
+    left: 11px;
+    font-weight: 600;
+    color: #ffbd00;
+    font-family: sans-serif;
+    text-shadow: 0 1px 0 #10002c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    display: none;
+}
+.panel__auto-counter-sign {
+    position: absolute;
+    width: 27px;
+    transition: all 1s linear;
 }
 .panel__auto-select {
     position: absolute;
@@ -296,6 +324,12 @@ img {
     margin: auto;
     width: 115px;
     animation: rotate 5.5s linear 2s infinite;
+}
+.active {
+    display: block;
+}
+.active-counter {
+    display: flex;
 }
 @keyframes rotate {
     0% {
